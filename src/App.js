@@ -15,7 +15,9 @@ class App extends React.Component {
       <Container>
         <Image src="../images/STEM EDA Jumbotron-02.png" rounded fluid />
         {stemEdaThreads}
+        <p>hello</p>
       </Container>
+      
     )
   } 
 }
