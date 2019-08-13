@@ -1,26 +1,24 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Container from 'react-bootstrap/Container';
+import Image from 'react-bootstrap/Image';
+import stemEdaData from './data/stem-eda-data';
+import ModuleTheme from './components/ModuleTheme';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+class App extends React.Component {
+  
+  render() {
+
+    const stemEdaThreads = stemEdaData.map((item) => <ModuleTheme threadname={item.thread} content={item.content}/>)
+
+    return (
+      <Container>
+        <Image src="../images/STEM EDA Jumbotron-02.png" rounded fluid />
+        {stemEdaThreads}
+        <o>hello</p>
+      </Container>
+    )
+  } 
 }
 
 export default App;
