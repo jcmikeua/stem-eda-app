@@ -1,5 +1,4 @@
-import React from 'react';
-import Container from 'react-bootstrap/Container';
+import React, {Fragment} from 'react';
 import Image from 'react-bootstrap/Image';
 import stemEdaData from './data/stem-eda-data';
 import ModuleTheme from './components/ModuleTheme';
@@ -12,10 +11,10 @@ class App extends React.Component {
     const stemEdaThreads = stemEdaData.map((item) => <ModuleTheme threadname={item.thread} content={item.content}/>)
 
     return (
-      <Container>
+      <Fragment>
         <Image src="../images/STEM EDA Jumbotron-02.png" rounded fluid />
         {stemEdaThreads}
-      </Container>
+      </Fragment>
       
     )
   } 
